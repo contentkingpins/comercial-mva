@@ -206,84 +206,13 @@
     <link rel="stylesheet" href="css/mobile.css" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="css/custom-overrides.css" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <!-- Critical CSS insertion & application -->
-    <script>
-      // Function to apply critical CSS rules to reduce FOUC
-      function applyStyles() {
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', applyMainElements);
-        } else {
-          applyMainElements();
-        }
-        
-        function applyMainElements() {
-          // Ensure the hero text is visible immediately
-          var h1 = document.querySelector('.hero h1');
-          if (h1) {
-            h1.style.opacity = '1';
-            
-            // Force layout to avoid browser optimizations
-            void h1.offsetWidth;
-          }
-        }
-      }
-      
-      // Call the function immediately
-      applyStyles();
-    </script>
-    
-    <!-- Inline LCP optimization script to reduce render delay -->
-    <script>
-    (function() {
-      // Config - Target h2
-      var lcpSelector = '.hero h2';
-      var useHardwareAcceleration = true;
-
-      // Priority optimization function
-      function optimizeLCP() {
-        var lcpElement = document.querySelector(lcpSelector);
-        if (!lcpElement) return;
-
-        // Set render priority styles
-        lcpElement.style.fontFamily = 'Arial, sans-serif'; // Force system font
-        lcpElement.style.visibility = 'visible';
-        lcpElement.style.opacity = '1';
-        
-        // Hardware acceleration
-        if (useHardwareAcceleration) {
-          lcpElement.style.transform = 'translateZ(0)';
-          lcpElement.style.willChange = 'contents';
-        }
-        
-        // Force layout calculation to commit styles
-        void lcpElement.getBoundingClientRect();
-      }
-
-      // Run immediately if possible
-      if (document.querySelector(lcpSelector)) {
-        optimizeLCP();
-      } else {
-        // Otherwise run as soon as DOM is ready
-        document.addEventListener('DOMContentLoaded', optimizeLCP);
-      }
-    })();
-    </script>
-    
-    <!-- Google Analytics with async loading and low priority -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" fetchpriority="low"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-64RR4KYLHH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID', {
-            'send_page_view': false,  // Delayed page view for better performance
-            'transport_type': 'beacon' // Use beacon for analytics data
-        });
-        // Send pageview on window load for better performance
-        window.addEventListener('load', function() {
-            gtag('event', 'page_view');
-        });
+        gtag('config', 'G-64RR4KYLHH');
     </script>
     <!-- Facebook Pixel -->
     <script>
