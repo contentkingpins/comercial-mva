@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVA Law | Commercial Vehicle Accident Attorneys</title>
+    <meta name="description" content="Experienced attorneys specializing in commercial vehicle accidents. Available 24/7 for free consultations.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a56db', 
+                        secondary: '#f59e0b',
+                        dark: '#111827',
+                        light: '#f9fafb'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- Header -->
+    <header class="bg-primary text-white">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold">MVA Law Firm</div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#about" class="hover:text-secondary transition">About Us</a></li>
+                        <li><a href="#services" class="hover:text-secondary transition">Services</a></li>
+                        <li><a href="#testimonials" class="hover:text-secondary transition">Testimonials</a></li>
+                        <li><a href="#faq" class="hover:text-secondary transition">FAQ</a></li>
+                        <li><a href="#contact" class="hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:5551234567" class="md:hidden flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                </a>
+                <button class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-primary text-white">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary to-blue-800 opacity-90"></div>
+            <div class="container mx-auto px-4 py-12 md:py-24 relative z-10">
+                <div class="md:flex md:items-center">
+                    <div class="md:w-1/2">
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Injured in a Commercial Vehicle Accident?</h1>
+                        <p class="text-lg md:text-xl mb-6">Our attorneys are available 24/7 to fight for the compensation you deserve.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="tel:5551234567" class="bg-secondary hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-lg inline-flex items-center justify-center transition transform hover:scale-105">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                Call Now: (555) 123-4567
+                            </a>
+                            <a href="#case-evaluation" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-6 rounded-lg inline-flex items-center justify-center transition">
+                                Free Case Evaluation
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden md:block md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Attorney consulting with client" class="rounded-lg shadow-xl ml-auto" width="450" height="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">About MVA Law Firm</h2>
+                <div class="md:flex md:gap-8 items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <p class="mb-4">At MVA Law Firm, we specialize exclusively in commercial vehicle accident cases. Our team of experienced attorneys has helped thousands of victims get the compensation they deserve after being injured in accidents involving trucks, buses, and other commercial vehicles.</p>
+                        <p>We understand the complex regulations that govern the commercial transportation industry and use this knowledge to build the strongest possible case for our clients. Our commitment to excellence and our proven track record of success set us apart from other law firms.</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <!-- Stats Cards -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                                <div class="text-primary text-3xl font-bold mb-2">20+</div>
+                                <div class="font-medium">Years Experience</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                                <div class="text-primary text-3xl font-bold mb-2">$100M+</div>
+                                <div class="font-medium">Recovered</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                                <div class="text-primary text-3xl font-bold mb-2">1,000+</div>
+                                <div class="font-medium">Cases Won</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                                <div class="text-primary text-3xl font-bold mb-2">24/7</div>
+                                <div class="font-medium">Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-12 md:py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">Our Services</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                        <div class="text-primary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Truck Accident Cases</h3>
+                        <p>We specialize in cases involving commercial trucks, including 18-wheelers, semi-trucks, and tractor-trailers. Our team understands the unique aspects of these accidents and the federal regulations that govern the trucking industry.</p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                        <div class="text-primary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Bus & Public Transport</h3>
+                        <p>Accidents involving buses and other forms of public transportation require specialized knowledge of common carrier laws. Our attorneys have extensive experience representing victims of these types of accidents.</p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                        <div class="text-primary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Delivery Vehicle Accidents</h3>
+                        <p>With the rise of e-commerce, accidents involving delivery vans and trucks have become more common. We help victims of these accidents recover compensation for their injuries and damages.</p>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                        <div class="text-primary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Insurance Claims</h3>
+                        <p>We handle all aspects of the insurance claims process, from filing initial claims to negotiating settlements. Our goal is to maximize your compensation and protect your rights throughout the process.</p>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                        <div class="text-primary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Litigation</h3>
+                        <p>When settlement negotiations fail, our skilled trial attorneys are prepared to take your case to court. We have a proven track record of successful litigation in commercial vehicle accident cases.</p>
+                    </div>
+
+                    <!-- Service Card 6 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                        <div class="text-primary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Immediate Response</h3>
+                        <p>We provide immediate legal support following an accident. Our team can quickly dispatch to the scene, help you navigate medical care, and start building your case while evidence is fresh.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Evaluation Form Section -->
+        <section id="case-evaluation" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-primary p-6 text-white">
+                            <h2 class="text-2xl font-bold mb-4">Free Case Evaluation</h2>
+                            <p class="mb-6">Fill out this form to get a free, no-obligation consultation with one of our experienced attorneys.</p>
+                            <div class="mb-4">
+                                <div class="flex items-center mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>Quick Response</span>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                    <span>Confidential</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>No Fee Unless We Win</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 p-6">
+                            <form class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="John Doe" required>
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="(555) 123-4567" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="john@example.com" required>
+                                </div>
+                                <div>
+                                    <label for="accident-type" class="block text-sm font-medium text-gray-700 mb-1">Accident Type</label>
+                                    <select id="accident-type" name="accident-type" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                                        <option value="">Select Accident Type</option>
+                                        <option value="truck">Truck Accident</option>
+                                        <option value="bus">Bus Accident</option>
+                                        <option value="delivery">Delivery Vehicle Accident</option>
+                                        <option value="other">Other Commercial Vehicle</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Brief Description of the Accident</label>
+                                    <textarea id="message" name="message" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Please provide a brief description of what happened..."></textarea>
+                                </div>
+                                <div class="pt-2">
+                                    <button type="submit" class="w-full bg-secondary hover:bg-yellow-600 text-black font-bold py-3 px-4 rounded-md transition transform hover:scale-105">
+                                        Get Your Free Consultation
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-12 md:py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">What Our Clients Say</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex text-yellow-400 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"After my accident with a delivery truck, I was overwhelmed with medical bills and lost wages. MVA Law Firm handled everything professionally and got me a settlement that covered all my expenses and more."</p>
+                        <div class="font-bold">Michael R.</div>
+                        <div class="text-sm text-gray-500">Truck Accident Victim</div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex text-yellow-400 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"The attorneys at MVA Law Firm were compassionate, knowledgeable, and fought hard for me. They took on the bus company and won. I couldn't be happier with the outcome of my case."</p>
+                        <div class="font-bold">Sarah L.</div>
+                        <div class="text-sm text-gray-500">Bus Accident Victim</div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex text-yellow-400 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"I was hit by a commercial truck and suffered serious injuries. MVA Law Firm secured a $2.1 million settlement for me. Their expertise in commercial vehicle accidents made all the difference."</p>
+                        <div class="font-bold">David K.</div>
+                        <div class="text-sm text-gray-500">Truck Accident Victim</div>
+                    </div>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="mt-12 py-8 border-t border-b border-gray-200">
+                    <h3 class="text-xl font-bold mb-6 text-center">Trusted By</h3>
+                    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                        <div class="flex flex-col items-center">
+                            <img src="https://via.placeholder.com/100x50?text=SuperLawyers" alt="Super Lawyers Badge" class="h-12">
+                            <span class="text-sm mt-2">Super Lawyers</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="https://via.placeholder.com/100x50?text=BBB+A+" alt="BBB A+ Rating" class="h-12">
+                            <span class="text-sm mt-2">BBB A+ Rating</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="https://via.placeholder.com/100x50?text=Top+100" alt="Top 100 Trial Lawyers" class="h-12">
+                            <span class="text-sm mt-2">Top 100 Trial Lawyers</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="https://via.placeholder.com/100x50?text=Million+Dollar" alt="Million Dollar Advocates Forum" class="h-12">
+                            <span class="text-sm mt-2">Million Dollar Advocates</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+                
+                <div class="max-w-3xl mx-auto">
+                    <!-- FAQ Item 1 -->
+                    <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-button flex justify-between items-center w-full p-5 text-left bg-white hover:bg-gray-50 transition" aria-expanded="false">
+                            <span class="font-bold">What should I do immediately after a commercial vehicle accident?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-5 bg-white">
+                            <div class="py-4 border-t border-gray-200">
+                                <p>After a commercial vehicle accident, you should:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1">
+                                    <li>Seek immediate medical attention, even if injuries seem minor</li>
+                                    <li>Contact law enforcement to file an official report</li>
+                                    <li>Document the scene with photos and videos if possible</li>
+                                    <li>Exchange information with the other driver(s), including insurance details</li>
+                                    <li>Collect contact information from any witnesses</li>
+                                    <li>Notify your insurance company about the accident</li>
+                                    <li>Contact an experienced commercial vehicle accident attorney as soon as possible</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-button flex justify-between items-center w-full p-5 text-left bg-white hover:bg-gray-50 transition" aria-expanded="false">
+                            <span class="font-bold">How much does it cost to hire a commercial vehicle accident attorney?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-5 bg-white">
+                            <div class="py-4 border-t border-gray-200">
+                                <p>At MVA Law Firm, we work on a contingency fee basis, which means you pay nothing upfront. We only get paid if we secure compensation for you. Our fee is typically a percentage of the settlement or verdict amount. This arrangement ensures that everyone can afford quality legal representation, regardless of their financial situation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-button flex justify-between items-center w-full p-5 text-left bg-white hover:bg-gray-50 transition" aria-expanded="false">
+                            <span class="font-bold">How long do I have to file a claim after a commercial vehicle accident?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-5 bg-white">
+                            <div class="py-4 border-t border-gray-200">
+                                <p>The statute of limitations for filing a claim after a commercial vehicle accident varies by state, typically ranging from 1-3 years from the date of the accident. However, it's crucial to contact an attorney as soon as possible after an accident. Early intervention allows us to preserve evidence, interview witnesses while memories are fresh, and ensure all filing deadlines are met. Additionally, claims against government entities often have much shorter notice requirements, sometimes as little as 30-90 days.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-button flex justify-between items-center w-full p-5 text-left bg-white hover:bg-gray-50 transition" aria-expanded="false">
+                            <span class="font-bold">What kinds of compensation can I receive for a commercial vehicle accident?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-5 bg-white">
+                            <div class="py-4 border-t border-gray-200">
+                                <p>Victims of commercial vehicle accidents may be eligible for various types of compensation, including:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1">
+                                    <li>Medical expenses (past and future)</li>
+                                    <li>Lost wages and lost earning capacity</li>
+                                    <li>Pain and suffering</li>
+                                    <li>Emotional distress</li>
+                                    <li>Property damage</li>
+                                    <li>Rehabilitation costs</li>
+                                    <li>In some cases, punitive damages</li>
+                                </ul>
+                                <p class="mt-2">The specific compensation available will depend on the details of your case, the severity of your injuries, and other factors. Our attorneys will work to maximize your recovery across all applicable categories.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-button flex justify-between items-center w-full p-5 text-left bg-white hover:bg-gray-50 transition" aria-expanded="false">
+                            <span class="font-bold">Why do I need a specialized commercial vehicle accident attorney?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="accordion-content px-5 bg-white">
+                            <div class="py-4 border-t border-gray-200">
+                                <p>Commercial vehicle accident cases are significantly more complex than typical auto accidents for several reasons:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1">
+                                    <li>They involve federal regulations (FMCSA) that don't apply to regular drivers</li>
+                                    <li>Multiple parties may be liable (driver, trucking company, vehicle manufacturer, etc.)</li>
+                                    <li>Commercial vehicles are typically covered by large insurance policies with aggressive defense teams</li>
+                                    <li>Evidence specific to commercial vehicles (logbooks, electronic logging devices, maintenance records) requires specialized knowledge to properly analyze</li>
+                                </ul>
+                                <p class="mt-2">Our attorneys specialize in commercial vehicle accident cases and understand how to navigate these complexities to build the strongest possible case for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mobile Sticky CTA -->
+        <div class="fixed bottom-0 left-0 right-0 bg-primary text-white p-3 flex justify-center z-50 md:hidden">
+            <a href="tel:5551234567" class="bg-secondary hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-lg inline-flex items-center justify-center w-full max-w-xs">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Call Now: (555) 123-4567
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Contact Info -->
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <address class="not-italic mb-4">
+                        <div class="mb-2">123 Legal Avenue</div>
+                        <div class="mb-2">Suite 500</div>
+                        <div class="mb-4">New York, NY 10001</div>
+                        <a href="tel:5551234567" class="flex items-center mb-2 hover:text-secondary transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            (555) 123-4567
+                        </a>
+                        <a href="mailto:info@mvalaw.com" class="flex items-center hover:text-secondary transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            info@mvalaw.com
+                        </a>
+                    </address>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-secondary transition">About Us</a></li>
+                        <li><a href="#services" class="hover:text-secondary transition">Our Services</a></li>
+                        <li><a href="#testimonials" class="hover:text-secondary transition">Client Testimonials</a></li>
+                        <li><a href="#faq" class="hover:text-secondary transition">Frequently Asked Questions</a></li>
+                        <li><a href="#case-evaluation" class="hover:text-secondary transition">Free Case Evaluation</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Practice Areas -->
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Practice Areas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-secondary transition">Truck Accidents</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Bus Accidents</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Delivery Vehicle Accidents</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Commercial Insurance Claims</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Catastrophic Injuries</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social & CTA -->
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="text-white hover:text-secondary transition" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-secondary transition" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-secondary transition" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-secondary transition" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-primary-dark p-4 rounded-lg">
+                        <p class="font-bold mb-2">Available 24/7 for Emergency Consultations</p>
+                        <a href="tel:5551234567" class="bg-secondary hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg inline-flex items-center transition w-full justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            Call Now: (555) 123-4567
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright & Disclaimer -->
+            <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-gray-400">
+                <p class="mb-4">&copy; 2023 MVA Law Firm. All rights reserved.</p>
+                <p>The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice for any individual case or situation. This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship.</p>
+                
+                <!-- Back to Top Button -->
+                <div class="text-center mt-6">
+                    <a href="#" class="inline-flex items-center text-white hover:text-secondary transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                        </svg>
+                        Back to Top
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('svg');
+                    
+                    content.classList.toggle('active');
+                    
+                    // Rotate icon when expanded
+                    if (content.classList.contains('active')) {
+                        icon.style.transform = 'rotate(180deg)';
+                        this.setAttribute('aria-expanded', 'true');
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                        this.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
