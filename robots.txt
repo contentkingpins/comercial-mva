@@ -1,0 +1,9 @@
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Allow all bots to access all content
+Disallow:
+
+# Location of the sitemap file
+Sitemap: https://myinjuryclaimnow.com/sitemap.xml 
