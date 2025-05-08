@@ -15,15 +15,41 @@
         gtag('config', 'G-64RR4KYLHH');
     </script>
     <!-- TrustedForm -->
-    <script>
+    <script type="text/javascript">
+        // Define TrustedForm as a global object if it doesn't exist
+        window.TrustedForm = window.TrustedForm || {};
+        
+        // Initialize TrustedForm certificate
         (function() {
             var tf = document.createElement('script');
             tf.type = 'text/javascript';
             tf.async = true;
-            tf.src = ('https:' == document.location.protocol ? 'https://': 'http://') + 
-                'api.trustedform.com/trustedform.js?field=trustedFormCertUrl&use_tagged_consent=true&l=' + 
-                new Date().getTime() + Math.random();
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+            tf.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 
+                'api.trustedform.com/trustedform.js?field=trustedFormCertUrl&provide_referrer=true';
+            
+            // Handle script load event
+            tf.onload = function() {
+                console.log('TrustedForm script loaded successfully');
+            };
+            
+            // Handle script error event
+            tf.onerror = function() {
+                console.error('Failed to load TrustedForm script');
+            };
+            
+            var s = document.getElementsByTagName('script')[0]; 
+            s.parentNode.insertBefore(tf, s);
+            
+            // Create a fallback getCertificateUrl method if TrustedForm doesn't load
+            if (!window.TrustedForm.getCertificateUrl) {
+                window.TrustedForm.getCertificateUrl = function(callback) {
+                    console.warn('Using fallback TrustedForm certificate method');
+                    if (callback) {
+                        callback(null, null);
+                    }
+                    return null;
+                };
+            }
         })();
     </script>
     <noscript><img src="https://api.trustedform.com/ns.gif" alt="TrustedForm pixel" /></noscript>
@@ -363,9 +389,6 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
                         </div>
                         <p class="text-gray-600 italic mb-4">"After my accident with a delivery truck, I was overwhelmed with medical bills and lost wages. Claim Connectors handled everything professionally and got me a settlement that covered all my expenses and more."</p>
                         <div class="font-bold">Michael R.</div>
@@ -390,9 +413,6 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
                         </div>
                         <p class="text-gray-600 italic mb-4">"The attorneys at Claim Connectors were compassionate, knowledgeable, and fought hard for me. They took on the bus company and won. I couldn't be happier with the outcome of my case."</p>
                         <div class="font-bold">Sarah L.</div>
@@ -402,12 +422,6 @@
                     <!-- Testimonial 3 -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex text-yellow-400 mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
@@ -814,22 +828,35 @@
                     };
                     
                     try {
-                        // Get TrustedForm certificate URL if available
+                        // Get TrustedForm certificate URL if available - use our improved implementation
                         let trustedFormCertUrl = null;
-                        if (typeof window.TrustedForm !== 'undefined') {
-                            trustedFormCertUrl = await new Promise((resolve) => {
-                                window.TrustedForm.getCertificateUrl((error, url) => {
-                                    if (error) {
-                                        console.error('Error getting TrustedForm certificate:', error);
+                        
+                        // This is our improved TrustedForm implementation
+                        if (window.TrustedForm) {
+                            try {
+                                trustedFormCertUrl = await new Promise((resolve) => {
+                                    // Set a timeout to handle cases where TrustedForm might hang
+                                    const timeout = setTimeout(() => {
+                                        console.warn('TrustedForm getCertificateUrl timed out');
                                         resolve(null);
-                                    } else {
-                                        console.log('TrustedForm certificate URL:', url);
-                                        resolve(url);
-                                    }
+                                    }, 3000);
+                                    
+                                    window.TrustedForm.getCertificateUrl((error, url) => {
+                                        clearTimeout(timeout);
+                                        if (error) {
+                                            console.error('Error getting TrustedForm certificate:', error);
+                                            resolve(null);
+                                        } else {
+                                            console.log('TrustedForm certificate URL:', url);
+                                            resolve(url);
+                                        }
+                                    });
                                 });
-                            });
+                            } catch (tfError) {
+                                console.error('Exception in TrustedForm certificate:', tfError);
+                            }
                         } else {
-                            console.warn('TrustedForm not loaded');
+                            console.warn('TrustedForm object not available - proceeding without certificate');
                         }
                         
                         // Add TrustedForm URL to form data if available
